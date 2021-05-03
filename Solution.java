@@ -4,7 +4,7 @@ public class Solution {
   /*
   Distance between directly connected ports is always '1'.
   With 100 ports, maximum indirect distance is 100x1.
-  Thus, when there is not a path(direct or indirect) between two ports
+  Thus, when there is no path(direct or indirect) between two ports
   we put a value '1000'.
   */
   public final int INFINITY = 1000;
