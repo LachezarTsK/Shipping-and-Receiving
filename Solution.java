@@ -1,4 +1,3 @@
-package shippingAndReceiving.gitHub;
 
 public class Solution {
 
@@ -36,11 +35,9 @@ public class Solution {
       int start = shipments[r][0];
       int end = shipments[r][1];
 
-      // If there is no path between two ports, direct or indirect, the cost for this shipment is
-      // '0'.
+      // If there is no path between two ports, direct or indirect, the cost for this shipment is '0'.
       if (shortestDistance[start][end] < INFINITY) {
-        totalCostForAllShipments = totalCostForAllShipments + shortestDistance[start][end];
-        // totalCostForAllShipments += shortestDistance[start][end];
+          totalCostForAllShipments += shortestDistance[start][end];
       }
     }
 
@@ -59,11 +56,9 @@ public class Solution {
 
         for (int end = 0; end < shortestDistance[start].length; end++) {
 
-          if (shortestDistance[start][end]
-              > shortestDistance[start][middle] + shortestDistance[middle][end]) {
+          if (shortestDistance[start][end] > shortestDistance[start][middle] + shortestDistance[middle][end]) {
 
-            shortestDistance[start][end] =
-                shortestDistance[start][middle] + shortestDistance[middle][end];
+            shortestDistance[start][end] = shortestDistance[start][middle] + shortestDistance[middle][end];
           }
         }
       }
